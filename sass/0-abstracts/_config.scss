@@ -1,0 +1,29 @@
+/**
+ * Abstracts
+ * Config.scss
+ * 
+ * Central configuration for the entire Sass architecture
+ * Modify these values to customize the boilerplate behavior
+ */
+
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+
+$config: (
+  grid-columns: 12,
+  grid-column: 100px,
+  grid-gap: 16px,
+  grid-padding: 16px,
+
+  base-font-size: 16px,
+
+  assets: "/",
+
+  font-primary: "Satoshi",
+  font-secondary: "Geist Mono",
+);
+
+@function config($key) {
+  @return map.get($config, $key);
+}

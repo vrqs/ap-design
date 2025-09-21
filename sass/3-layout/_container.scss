@@ -1,0 +1,23 @@
+/**
+ * Layout
+ * Container.scss
+ */
+
+@use "../0-abstracts/" as *;
+
+.container {
+  --padding: #{ config("grid-padding") };
+
+  @include wh(
+    100%,
+    $max-w: calc( container-width() + calc(var(--padding) * 2) )
+  );
+  
+  padding-inline: config("grid-padding");
+  margin: auto;
+
+  &-8 {
+    @extend .container;
+    max-width: calc( container-width(8) + calc(var(--padding) * 2) );
+  }
+}

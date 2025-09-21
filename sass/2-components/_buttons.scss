@@ -1,0 +1,58 @@
+/**
+ * Components
+ * Buttons.scss
+ */
+
+@use "sass:color";
+@use "../0-abstracts/" as *;
+
+.button-primary {
+  @include flex(row, center, $gap: 24px);
+  max-width: max-content;
+  padding: 24px 32px;
+  background-color: rgb(var(--color-accent-primary));
+  border-radius: to-rem(20);
+  text-decoration: none;
+  
+  @include font(
+    to-rem(24),
+    to-rem(24),
+    to-rem(-.6px),
+    500,
+    rgb(var(--color-text-light)),
+    config("font-secondary")
+  );
+
+  outline: 2px solid color.adjust(get-color(accent, primary), $whiteness: 50%);
+  box-shadow: 0 4px 0 color.adjust(get-color(accent, primary), $whiteness: 50%);
+
+  @include pseudo(after) {
+    @include icon("icon-arrow-tr.svg", 20px);
+  }
+}
+
+.button-text {
+  display: inline-block;
+  max-width: max-content;
+  padding: 12px 16px;
+  text-decoration: none;
+
+  @include font(
+    to-rem(18),
+    to-rem(20),
+    to-rem(-.8px),
+    600,
+    rgb(var(--color-text-dark)),
+    config("font-secondary")
+  );
+}
+
+.button-dashed {
+  @extend .button-text;
+  // color: rgb(var(--color-accent-primary));
+  background-color: rgb(var(--color-basic-white));
+  border-image-source: url("/dashed.svg");
+  border-image-slice: 16;
+  border-image-width: 16px;
+  border-image-repeat: round round;
+}

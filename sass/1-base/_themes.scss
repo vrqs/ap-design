@@ -1,0 +1,39 @@
+/**
+ * Base
+ * Themes.scss
+ *
+ * Generates light and dark color themes
+ */
+
+@use "../0-abstracts" as *;
+
+:root {
+  @include generate-color-theme($color-theme-light);
+  background-color: var(--color-background-site);
+}
+
+// .theme-light {
+//   @include generate-color-theme($color-theme-light);
+//   background-color: var(--color-background-site);
+// }
+
+// .theme-dark {
+//   @include generate-color-theme($color-theme-dark);  
+// }
+
+html,
+body {
+  position: relative;
+}
+
+html {
+  @include mq($max: md) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: config("font-primary"), sans-serif;
+  @include bg("bg-pattern.svg", $repeat: repeat);
+  background-color: var(--color-background-site);
+}

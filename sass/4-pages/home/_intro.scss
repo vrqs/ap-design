@@ -1,0 +1,16 @@
+/**
+ * Pages / Home
+ * Intro.scss
+ */
+
+@use "../scopes" as scope;
+@use "../../0-abstracts/" as *;
+@use "../../1-base/typography" as *;
+
+#{scope.$home} {
+
+.intro {
+  padding-bottom: 80px;
+}
+
+}

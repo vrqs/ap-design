@@ -1,0 +1,20 @@
+/**
+ * Layout
+ * Header.scss
+ */
+
+@use "../0-abstracts/" as *;
+
+.header-main {
+  @include padding(y, 32);
+
+  nav.menu {
+    a {
+      margin-left: 16px;
+    } 
+  }
+
+  .container {
+    @include flex(row, center, space-between);
+  }
+}

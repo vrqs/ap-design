@@ -1,0 +1,67 @@
+/**
+ * Abstracts
+ * Functions.scss
+ */
+
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "./config" as *;
+@use "./variables" as *;
+
+ /**
+  * Returns normalized value with a given unit (defaults to px)
+  */
+@function normalize-unit($value, $unit: px) {
+  @return if(
+    meta.type-of($value) == "number" and math.unit($value) == "",
+    $value + $unit,
+    $value
+  );
+}
+
+/**
+  * Returns breakpoint based on a given key
+  */
+@function bp($key) {
+  @if map.has-key($breakpoints, $key) {
+    @return map.get($breakpoints, $key);
+  }
+
+  @warn "Breakpoint `#{$key}` not found in $breakpoints map.";
+  @return null;
+}
+
+/**
+  * Returns width value for container based on number of columns
+  */
+@function container-width($columns: null) {
+  $container-columns: if($columns, $columns, config("grid-columns"));
+
+  @return col-width($container-columns);
+}
+
+/**
+  * Returns width value for X number of columns
+  */
+@function col-width($columns) {
+  @return (config("grid-column") * $columns) + (config("grid-gap") * ($columns - 1));
+}
+
+/**
+  * Utility function to strip units from numbers
+  */
+@function strip-unit($number) {
+  @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+  @return $number;
+}
+
+/**
+  * Convert px to rem based on base font size
+  */
+@function to-rem($px-value, $base: null) {
+  $base-size: if($base, $base, config("base-font-size"));
+  @return math.div(strip-unit($px-value), strip-unit($base-size)) * 1rem;
+}
