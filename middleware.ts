@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(req: NextRequest) {
-  const headers = new Headers(req.headers);
-  headers.set("x-current", req.nextUrl.pathname);
-  
-  return NextResponse.next({ headers });
+  const res = NextResponse.next();
+  res.headers.set("x-current", req.nextUrl.pathname);
+  return res;
 }
