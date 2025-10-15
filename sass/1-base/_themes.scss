@@ -34,6 +34,30 @@ html {
 
 body {
   font-family: config("font-primary"), sans-serif;
-  @include bg("bg-pattern.svg", $repeat: repeat);
+  // @include bg("bg-pattern.svg", $repeat: repeat);
   background-color: var(--color-background-site);
+}
+
+.background {
+  @include pos(0, $l: 0, $pos: fixed, $z: -1);
+  @include wh(100%, 100vh);
+  @include flex(row, center, center);
+
+  @include pseudo() {
+    @include wh(100%, 200px);
+    background-image: linear-gradient(
+      rgba(var(--color-background-site), 1) 20%,
+      rgba(var(--color-background-site), 0) 100%
+    );
+    @include pos(0, $l: 0); 
+  }
+
+  img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .center {
+    @include wh(100%, 100vh, col-width(8));
+  }
 }

@@ -1,0 +1,23 @@
+/**
+ * Components
+ * Chip
+ */
+
+@use "sass:color";
+@use "../0-abstracts/" as *;
+@use "../1-base/" as *;
+
+.chip {
+  background-color: rgba(var(--color-accent-primary), .08);
+  color: rgb(var(--color-accent-primary));
+  @include flex(row, center, $gap: 4px);
+  @include wh(100%, 28px, max-content); 
+  @include border(
+    1px,
+    rgba(var(--color-accent-primary), .08),
+    $radius: 8px
+  );
+  padding-inline: 8px;
+
+  @extend .label-normal;
+}

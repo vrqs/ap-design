@@ -20,10 +20,26 @@
 
 .heading {
   &-5 {
-    @include font(to-rem(32), to-rem(40), to-rem(-.6), 900);
+    @include font(to-rem(32), to-rem(40), to-rem(-.6), 800);
     
     &.-light {
       font-weight: 500;
+
+      .default {
+        font-weight: 800;
+      }
     }
+  }
+}
+
+.body {
+  &-normal {
+    @include font(to-rem(20), to-rem(24), to-rem(-.2), 500);
+  }
+}
+
+.label {
+  &-normal {
+    @include font(to-rem(16), to-rem(20), to-rem(-.6), 600, $family: config("font-secondary"));
   }
 }

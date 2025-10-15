@@ -20,4 +20,9 @@
     @extend .container;
     max-width: calc( container-width(8) + calc(var(--padding) * 2) );
   }
+
+  &-6 {
+    @extend .container;
+    max-width: calc( container-width(6) + calc(var(--padding) * 2) );
+  }
 }

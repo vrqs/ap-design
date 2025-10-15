@@ -10,7 +10,24 @@
 #{scope.$home} {
 
 .intro {
-  padding-bottom: 80px;
+  margin-top: 48px;
+  padding-bottom: 64px;
+  
+  [class*="container"] {
+    padding-top: 48px;
+    border-top: 1px dashed rgb(var(--color-border-light));
+  }
+
+  .content-inner {
+    max-width: col-width(6);
+    margin: auto;
+  }
+
+  .services {
+    margin-top: 24px;
+    width: 100%;
+    @include flex(row, $gap: 8px);
+  }
 }
 
 }

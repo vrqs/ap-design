@@ -1,0 +1,29 @@
+/**
+ * Components
+ * Cards
+ */
+
+@use "sass:color";
+@use "../0-abstracts/" as *;
+@use "../1-base/" as *;
+
+.card-chat {
+  padding: 10px 16px 14px;
+  @include border(
+    1px,
+    rgba(var(--color-text-primary), .08),
+    $radius: 24px
+  );
+  @extend .body-normal;
+  @include wh(100%, $max-w: max-content);
+
+  &.accent {
+    border-color: rgba(var(--color-accent-primary), .2);
+    color: rgba(var(--color-accent-primary), .5);
+
+    span {
+      color: rgba(var(--color-accent-primary), 1);
+      font-weight: 550;
+    }
+  }
+}

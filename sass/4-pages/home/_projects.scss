@@ -1,0 +1,32 @@
+/**
+ * Pages / Home
+ * Projects
+ */
+
+@use "../scopes" as scope;
+@use "../../0-abstracts/" as *;
+@use "../../1-base/typography" as *;
+
+#{scope.$home} {
+
+.projects {
+  padding: 64px 0;
+  background-color: rgb(var(--color-background-site));
+  border-bottom: 1px solid rgb(var(--color-border-light));
+
+  .projects-gallery {
+    @include flex(row, $gap: config("grid-gap"));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    .project-slide {
+      scroll-snap-align: start;
+      @include wh(100%, 550px, col-width(8));
+      flex: 0 0 100%;
+    }
+  }
+}
+
+}

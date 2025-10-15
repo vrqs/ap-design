@@ -11,37 +11,15 @@
 
 .hero {
   position: relative;
-  padding-bottom: 64px;
-
-  .container {
-    max-width: calc(container-width(11) + calc(config("grid-padding") * 2));
-    margin: 0 0 0 auto;
-  }
-
-  .top {
-    .display {
-      max-width: col-width(6);
-      position: relative;
-
-      @include pseudo() {
-        @include icon("icon-hero-1.svg", 64px);
-        @include pos(25%, $l: 88%);
-      }
-    }
-  }
-
-  .bottom {
-    max-width: col-width(7);
-    justify-self: end;
-    color: rgb(var(--color-accent-primary));
-
-    .display {
-      position: relative;
-
-      @include pseudo(after) {
-        @include icon("icon-hero-2.svg", 64px);
-        @include pos($l: 70%, $b: -25%);
-      }
+  border-bottom: 1px solid rgb(var(--color-border-light));
+  
+  .display {
+    position: relative;
+    margin-bottom: 56px;
+    
+    span {
+      display: block;
+      color: rgb(var(--color-accent-primary));
     }
   }
 
