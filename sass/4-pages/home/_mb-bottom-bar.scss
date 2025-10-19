@@ -1,0 +1,55 @@
+/**
+ * Pages / Home
+ * Mobile Bottom Bar
+ */
+
+@use "../scopes" as scope;
+@use "../../0-abstracts/" as *;
+@use "../../1-base/typography" as *;
+
+#{scope.$home} {
+
+.mb-bottom-bar {
+  display: none;
+  width: 100%;
+  padding: 16px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 120ms;
+  @include pos($b: 0, $pos: fixed, $z: 99);
+  
+  @include pseudo(after) {
+    @include wh(100%, 140px);
+    @include pos($l: 0, $b: 0, $z: -1);
+    background-image: linear-gradient(
+      rgba(var(--color-background-site), 0) 0%,
+      rgba(var(--color-background-site), 1) 60%
+    );
+  }
+
+  .button {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+
+  @include mq($max: md) {
+    display: block;
+  }
+
+  &.bg-hidden {
+    &::after {
+      display: none;
+    }
+  }
+  
+  &.hidden {
+    pointer-events: none;
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+}

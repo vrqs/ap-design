@@ -26,7 +26,15 @@
   .services {
     margin-top: 24px;
     width: 100%;
-    @include flex(row, $gap: 8px);
+    @include flex(row, $gap: 8px, $wrap: wrap);
+  }
+
+  @include mq($max: md) {
+    margin-top: 36px;
+
+    [class*="container"] {
+      padding-top: 24px;
+    }
   }
 }
 

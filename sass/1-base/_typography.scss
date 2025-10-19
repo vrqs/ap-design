@@ -5,19 +5,6 @@
 
 @use "../0-abstracts/" as *;
 
-.display {
-  @include font(to-rem(96), to-rem(80), to-rem(-4), 900);
-
-  &.-light {
-    font-weight: 400;
-    letter-spacing: to-rem(-3px);
-  }
-
-  @include mq($max: md) {
-    @include font(to-rem(72), to-rem(64), to-rem(-4), 900);
-  }
-}
-
 .heading {
   &-1 {
     @include font(to-rem(96), to-rem(80), to-rem(-4), 900);
@@ -52,6 +39,39 @@
       }
     }
   }
+
+  @include mq($max: md) {
+    &-1 {
+      @include font(to-rem(48), to-rem(44), to-rem(-2), 900);
+    }
+
+    &-2 {
+      @include font(to-rem(40), to-rem(40), to-rem(-1.6), 900);
+    }
+    
+    &-3 {
+      @include font(to-rem(36), to-rem(36), to-rem(-1.6), 900);
+    }
+
+    &-4 {
+      @include font(to-rem(32), to-rem(32), to-rem(-1.6), 900);
+    }
+
+    &-5 {
+      @include font(to-rem(28), to-rem(28), to-rem(-1.2), 800);
+    }
+
+    &-6 {
+      @include font(to-rem(24), to-rem(28), to-rem(-.6), 700);
+
+      &.-light,
+      .-light {
+        font-weight: 500;
+        line-height: to-rem(28);
+        letter-spacing: to-rem(-.4);
+      }
+    }
+  }
 }
 
 .body {
@@ -67,6 +87,21 @@
   &.body-normal {
     @include font(to-rem(20), to-rem(28), to-rem(-.2), 550);
   }
+
+  @include mq($max: md) {
+    &.body-large {
+      @include font(to-rem(22), to-rem(28), to-rem(-.3), 500);
+
+      &.-bold,
+      .-bold {
+        font-weight: 700;
+      }
+    }
+    
+    &.body-normal {
+      @include font(to-rem(18), to-rem(24), to-rem(-.1), 550);
+    }
+  }
 }
 
 .link {
@@ -78,6 +113,16 @@
 
   &.link-normal {
     @include font(to-rem(20), to-rem(24), to-rem(-.6), 600, $family: config("font-secondary"));
+  }
+
+  &.link-small {
+    @include font(to-rem(16), to-rem(20), to-rem(-.6), 600, $family: config("font-secondary"));
+  }
+
+  @include mq($max: md) {
+    &.link-large {
+      @include font(to-rem(18), to-rem(20), to-rem(-.6), 600, $family: config("font-secondary"));
+    }
   }
 }
 

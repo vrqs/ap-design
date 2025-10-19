@@ -13,7 +13,7 @@
     $max-w: calc( container-width() + calc(var(--padding) * 2) )
   );
   
-  padding-inline: config("grid-padding");
+  padding-inline: var(--padding);
   margin: auto;
 
   &-8 {
@@ -24,5 +24,9 @@
   &-6 {
     @extend .container;
     max-width: calc( container-width(6) + calc(var(--padding) * 2) );
+  }
+
+  @include mq($max: md) {
+    --padding: 24px;
   }
 }

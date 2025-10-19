@@ -11,10 +11,11 @@
 
 .hero {
   padding-top: 48px;
+  // @include padding(y, (48, 56));
   position: relative;
   // border-bottom: 1px solid rgb(var(--color-border-light));
   
-  .display {
+  .title {
     position: relative;
     margin-bottom: 56px;
     
@@ -24,18 +25,17 @@
     }
   }
 
-  @include mq($max: xl) {
-    .display-wrapper {
-      margin-bottom: 32px;
-    }
-  }
-
   @include mq($max: md) {
-    font-size: 12px;
+    padding-top: 100px;
 
-    .top .display::before,
-    .bottom .display::after {
-      display: none;
+    .title {
+      margin-bottom: 24px;
+    }
+
+    .button {
+      @include wh(calc(100%), $max-w: none);
+      justify-content: space-between;
+      // transform: translateX(-1px);
     }
   }
 }

@@ -27,30 +27,6 @@
   .process-steps {
     padding-top: 56px;
     @include grid($gap: 16px);
-    
-    .step {
-      position: relative;
-
-      &:not(.step-intro) {
-        @include pseudo() {
-          @include pos(8px, $l: 0);
-          transform: translateX(calc(-100% - 16px));
-          @include icon("icon-process-1.svg", $size: 32px); 
-        }
-      }
-
-      &.step-2 {
-        @include pseudo() {
-          @include icon("icon-process-2.svg", $size: 32px); 
-        }
-      }
-      
-      &.step-3 {
-        @include pseudo() {
-          @include icon("icon-process-3.svg", $size: 32px); 
-        }
-      }
-    }
 
     .steps-main {
       @include flex(row, flex-end, $gap: 8px);
@@ -59,6 +35,50 @@
 
       .steps {
         @include flex(column, $gap: 8px);
+      }
+
+      .step {
+        @include pseudo() {
+          @include pos(8px, $l: 0);
+          transform: translateX(calc(-100% - 16px));
+          @include icon("icon-process-1.svg", $size: 32px); 
+        }
+
+        position: relative;
+
+        &.step-2 {
+          @include pseudo() {
+            @include icon("icon-process-2.svg", $size: 32px); 
+          }
+        }
+        
+        &.step-3 {
+          @include pseudo() {
+            @include icon("icon-process-3.svg", $size: 32px); 
+          }
+        }
+      }
+    }
+  }
+
+  @include mq($max: md) {
+    padding-bottom: 48px;
+    
+    .process-steps {
+      padding-top: 32px;
+
+      .steps-main {
+        @include flex(column);
+        padding-left: 16px;
+
+        .step {
+          @include flex($gap: 12px);
+
+          @include pseudo() {
+            @include pos(8px, $l: 0, $pos: relative);
+            transform: translateX(0);
+          }
+        }
       }
     }
   }

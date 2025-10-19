@@ -1,0 +1,33 @@
+/**
+ * Pages / Home
+ * CTA
+ */
+
+@use "../scopes" as scope;
+@use "../../0-abstracts/" as *;
+@use "../../1-base/typography" as *;
+
+#{scope.$home} {
+
+.cta {
+  padding-bottom: 48px;
+
+  @include mq($max: md) {
+    padding-bottom: 0;
+
+    [class*="container"] {
+      padding: 0;
+      background-color: rgb(var(--color-background-site));
+    }
+
+    .card-cta {
+      padding-bottom: 92px;
+    }
+
+    .button {
+      display: none;
+    }
+  }
+}
+
+}

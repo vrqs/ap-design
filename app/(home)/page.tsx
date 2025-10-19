@@ -1,5 +1,7 @@
 import Button from "@/app/components/Button";
+import ProjectsSlider from "@/app/components/ProjectsSlider";
 import Image from "next/image";
+
 import {
   Laptop,
   Store,
@@ -7,17 +9,22 @@ import {
   TextSearch,
 } from "lucide-react";
 
+import MobileBottomBar from "../components/MobileBottomBar";
+
 const Home = () => {
+  // const ctaRef = useRef<HTMLElement | null>(null);
   return (
     <main>
+      <MobileBottomBar />
+
       <section className="hero">
         <div className="container-6">
-          <h1 className="display">Sites rápidos, modernos e eficientes <span>para quem quer vender mais</span></h1>
+          <h1 className="title heading-1">Sites rápidos, modernos e eficientes <span>para quem quer vender mais</span></h1>
 
           <Button
             size="large"
             label="Agendar sessão gratuita"
-            url="#"
+            url="https://calendly.com/geral-apdsn/30min/"
           />
         </div>
 
@@ -61,20 +68,7 @@ const Home = () => {
       </section>
 
       <section className="projects">
-        <div className="projects-gallery">
-          <div className="project-slide">
-            {/* <Image src="/project-1.png" alt="" width={912} height={550} /> */}
-          </div>
-          
-          <div className="project-slide">
-            {/* <Image src="/project-1.png" alt="" width={912} height={550} /> */}
-          </div>
-          
-          <div className="project-slide">
-            {/* <Image src="/project-1.png" alt="" width={912} height={550} /> */}
-          </div>
-          
-        </div>
+        <ProjectsSlider projects={["A", "B", "C"]} />
       </section>
 
       <section className="process">
@@ -119,7 +113,7 @@ const Home = () => {
             <Button
               size="normal"
               label="Agendar sessão gratuita"
-              url="#"
+              url="https://calendly.com/geral-apdsn/30min/"
             />
           </div>
         </div>

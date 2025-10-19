@@ -8,15 +8,21 @@
 .header-main {
   width: 100%;
   @include padding(y, 48);
-  @include pos();
+  @include pos($pos: fixed, $z: 10);
 
   nav.menu {
-    a {
-      margin-left: 16px;
-    } 
+    @include flex(row, center, $gap: 16px);
   }
 
   .container {
     @include flex(row, center, space-between);
+  }
+  
+  @include mq($max: md) {
+    @include padding(y, 24);
+
+    nav .button-dashed {
+      display: none;
+    }
   }
 }
