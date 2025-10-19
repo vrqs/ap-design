@@ -8,14 +8,13 @@ const Header = () => {
           className="logo"
           src="/logo.svg"
           alt="APSDSN"
-          width={42}
-          height={54}
+          width={56}
+          height={56}
           priority
         />
 
         <nav className="menu">
-          <a href="#" className="button-text">Processo</a>
-          <a href="#" className="button-dashed">Vamos falar</a>
+          <a href="#" className="button-dashed">Agendar Sessão</a>
         </nav>
       </div>
     </header>

@@ -16,7 +16,7 @@ $color-theme-light: (
     black: #180700
   ),
   accent: (
-    primary: #F55B1E,
+    primary: #F5541E,
   ),
   background: (
     site: #FFFFFF,
@@ -28,6 +28,10 @@ $color-theme-light: (
   text: (
     primary: #180700,
     light: #FFF,
+  ),
+  gray: (
+    100: #1E1C1B,
+    10: #E8E8E8,
   )
 );
 

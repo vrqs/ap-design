@@ -10,8 +10,9 @@
 #{scope.$home} {
 
 .hero {
+  padding-top: 48px;
   position: relative;
-  border-bottom: 1px solid rgb(var(--color-border-light));
+  // border-bottom: 1px solid rgb(var(--color-border-light));
   
   .display {
     position: relative;

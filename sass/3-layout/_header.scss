@@ -6,7 +6,9 @@
 @use "../0-abstracts/" as *;
 
 .header-main {
-  @include padding(y, 32);
+  width: 100%;
+  @include padding(y, 48);
+  @include pos();
 
   nav.menu {
     a {

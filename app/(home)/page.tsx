@@ -15,7 +15,8 @@ const Home = () => {
           <h1 className="display">Sites rápidos, modernos e eficientes <span>para quem quer vender mais</span></h1>
 
           <Button
-            label="Vamos Falar"
+            size="large"
+            label="Agendar sessão gratuita"
             url="#"
           />
         </div>
@@ -23,7 +24,7 @@ const Home = () => {
         <div className="intro">
           <div className="container-8">
             <div className="content-inner">
-              <h2 className="heading-5 -light">Um estúdio web focado em criar moradas digitais que convertem visitas em clientes.</h2>
+              <h2 className="heading-6">Um estúdio focado em criar moradas digitais<span className="-light"> que convertem visitas em clientes.</span></h2>
 
               <ul className="services">
                 <li>
@@ -60,19 +61,17 @@ const Home = () => {
       </section>
 
       <section className="projects">
-        <h2>Projects</h2>
-
         <div className="projects-gallery">
           <div className="project-slide">
-            <Image src="/project-1.png" alt="" width={912} height={550} />
+            {/* <Image src="/project-1.png" alt="" width={912} height={550} /> */}
           </div>
           
           <div className="project-slide">
-            <Image src="/project-1.png" alt="" width={912} height={550} />
+            {/* <Image src="/project-1.png" alt="" width={912} height={550} /> */}
           </div>
           
           <div className="project-slide">
-            <Image src="/project-1.png" alt="" width={912} height={550} />
+            {/* <Image src="/project-1.png" alt="" width={912} height={550} /> */}
           </div>
           
         </div>
@@ -81,7 +80,7 @@ const Home = () => {
       <section className="process">
         <div className="container-8">
           <div className="content-inner">
-            <h2 className="section-title heading-5 -light">Trabalhamos de forma ágil e simples. <span className="default">Não somos de complicar.</span></h2>
+            <h2 className="section-title heading-6">Trabalhamos de forma ágil e simples. <span className="-light">Não somos de complicar.</span></h2>
 
             <div className="process-steps">
               <div className="step step-intro">
@@ -91,21 +90,37 @@ const Home = () => {
               <div className="steps-main">
                 <div className="steps">
                   <div className="step step-1">
-                    <p className="card-chat accent"><span>Começamos por identificar os seus objetivos.</span> Aumentar vendas? Melhorar conversões? Comunicar de forma mais eficiente?</p>
+                    <p className="card-chat">Começamos por identificar os seus objetivos. <span>Aumentar vendas? Melhorar conversões? Comunicar de forma mais eficiente?</span></p>
                   </div>
                   
                   <div className="step step-2">
-                    <p className="card-chat accent"><span>Definimos uma direção visual</span> ajustada a si e ao seu negócio e <span>construímos a solução</span>, implementando as tecnologias mais eficientes do mercado.</p>
+                    <p className="card-chat"><span>Definimos uma direção visual</span> ajustada a si e ao seu negócio e <span>construímos a solução</span>, implementando as tecnologias mais eficientes do mercado.</p>
                   </div>
                   
                   <div className="step step-3">
-                    <p className="card-chat accent"><span>No final, damos vida ao seu projeto</span>, fazendo o alojamento e acompanhando todo o processo de manutenção!</p>
+                    <p className="card-chat"><span>No final, damos vida ao seu projeto</span>, fazendo o alojamento e acompanhando todo o processo de manutenção!</p>
                   </div>
                 </div>
 
                 <Image src="./logo.svg" alt="" width={32} height={32} />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta">
+        <div className="container-8">
+          <div className="card-cta">
+            <span className="chip text-small">Vamos trabalhar juntos</span>
+
+            <p className="body body-large"><span className="-bold">Agende uma sessão gratuita de 30 minutos</span>, vamos falar sobre o soluções para o seu projeto.</p>
+
+            <Button
+              size="normal"
+              label="Agendar sessão gratuita"
+              url="#"
+            />
           </div>
         </div>
       </section>

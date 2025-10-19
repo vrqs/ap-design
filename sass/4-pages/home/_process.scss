@@ -11,7 +11,7 @@
 
 .process {
   padding: 64px 0;
-  border-bottom: 1px solid rgb(var(--color-border-light));
+  // border-bottom: 1px solid rgb(var(--color-border-light));
 
   .content-inner {
     max-width: col-width(6);
@@ -25,7 +25,7 @@
   }
 
   .process-steps {
-    padding: 56px 0 80px;
+    padding-top: 56px;
     @include grid($gap: 16px);
     
     .step {

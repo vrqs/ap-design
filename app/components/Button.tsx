@@ -1,11 +1,14 @@
 interface ButtonProps {
   label: string;
   url: string;
+  size: string;
 }
 
-const Button = ({ label, url }: ButtonProps) => {
+const Button = ({ label, url, size }: ButtonProps) => {
+  const className = `button-${size}`;
+  
   return (
-    <a className="button-primary" href={url}>{label}</a>
+    <a className={`${className} -primary`} href={url}>{label}</a>
   )
 }
 

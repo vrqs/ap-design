@@ -39,7 +39,7 @@ body {
 }
 
 .background {
-  @include pos(0, $l: 0, $pos: fixed, $z: -1);
+  @include pos(0, $l: 0, $pos: fixed, $z: -10);
   @include wh(100%, 100vh);
   @include flex(row, center, center);
 

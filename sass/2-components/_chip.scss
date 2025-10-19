@@ -12,12 +12,17 @@
   color: rgb(var(--color-accent-primary));
   @include flex(row, center, $gap: 4px);
   @include wh(100%, 28px, max-content); 
+  
   @include border(
     1px,
     rgba(var(--color-accent-primary), .08),
-    $radius: 8px
+    $radius: 28px
   );
+  
   padding-inline: 8px;
+  @extend .label, .label-normal;
 
-  @extend .label-normal;
+  &.text-small {
+    @extend .label, .label-small;
+  }
 }

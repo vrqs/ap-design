@@ -10,13 +10,26 @@
 #{scope.$home} {
 
 .projects {
-  padding: 64px 0;
-  background-color: rgb(var(--color-background-site));
-  border-bottom: 1px solid rgb(var(--color-border-light));
+  // padding: 64px 0;
+  // background-color: rgb(var(--color-background-site));
+  // border-bottom: 1px solid rgb(var(--color-border-light));
+  position: relative;
+  @include pseudo(after) {
+    @include wh(100%, calc(100% + 128px));
+    @include pos(-64, $z: -1);
+    background-image: linear-gradient(180deg,
+      rgba(var(--color-background-site), 0) 0%,
+      rgba(var(--color-background-site), 1) 20%,
+      rgba(var(--color-background-site), 1) 80%,
+      rgba(var(--color-background-site), 0) 100%
+    );
+  }
 
   .projects-gallery {
     @include flex(row, $gap: config("grid-gap"));
     overflow-x: auto;
+    @include padding(y, 64);
+    @include margin(y, -64);
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -25,6 +38,8 @@
       scroll-snap-align: start;
       @include wh(100%, 550px, col-width(8));
       flex: 0 0 100%;
+      @include border(1px, rgb(var(--color-gray-10)), $radius: 20px);
+      box-shadow: 0 0 16px rgba(var(--color-gray-100), .04);
     }
   }
 }
