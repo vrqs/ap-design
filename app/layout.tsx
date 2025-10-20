@@ -8,23 +8,23 @@ import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: {
-    default: "Web Design & Sites Rápidos, Modernos e Eficientes | APDesign Portugal",
-    template: "%s | APDesign",
+    default: "Web Design & Sites Rápidos, Modernos e Eficientes | APDSN Portugal",
+    template: "%s | APDSN",
   },
-  description: "Criamos sites rápidos, modernos e eficientes para empresas portuguesas. A APDesign é um estúdio web focado em transformar visitas em clientes através de design funcional e otimizado para resultados.",
-  metadataBase: new URL("https://apdesign.pt"),
+  description: "Criamos sites rápidos, modernos e eficientes para empresas portuguesas. A APDSN é um estúdio web focado em transformar visitas em clientes através de design funcional e otimizado para resultados.",
+  metadataBase: new URL("https://apdsn.pt"),
   openGraph: {
-    title: "APDesign | Estúdio Web em Portugal",
+    title: "APDSN | Estúdio Web em Portugal",
     description:
       "Sites rápidos, modernos e eficientes para quem quer vender mais. Transformamos visitas em clientes.",
-    url: "https://apdesign.pt",
-    siteName: "APDesign",
+    url: "https://apdsn.pt",
+    siteName: "APDSN",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "APDesign - Criação de Sites Profissionais em Portugal",
+        alt: "APDSN - Criação de Sites Profissionais em Portugal",
       },
     ],
     locale: "pt_PT",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "APDesign | Criação de Sites Profissionais em Portugal",
+    title: "APDSN | Criação de Sites Profissionais em Portugal",
     description:
       "Sites rápidos, modernos e eficientes para quem quer vender mais. Estúdio web em Portugal.",
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://apdesign.pt",
+    canonical: "https://apdsn.pt",
   },
   icons: {
     icon: "/favicon.svg",
@@ -59,6 +59,7 @@ export default async function RootLayout({
     <html lang="pt">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
       </head>
       <body className={`page-${className}`}>
         <Header />
