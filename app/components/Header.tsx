@@ -15,7 +15,7 @@ const Header = () => {
 
         <nav className="menu">
           <a href="https://calendly.com/geral-apdsn/30min/" target="_blank" className="button-dashed">Agendar Sessão</a>
-          <a href="#" className="button-icon icon-whatsapp"></a>
+          <a href="https://wa.me/351914792461" className="button-icon icon-whatsapp"></a>
         </nav>
       </div>
     </header>
