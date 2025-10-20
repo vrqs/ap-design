@@ -1,31 +1,37 @@
 <svg width="250" height="2000" viewBox="0 0 250 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="path-1-outside-1_179_20" maskUnits="userSpaceOnUse" x="0.77832" y="0" width="18" height="2000" fill="black">
-<rect fill="white" x="0.77832" width="18" height="2000"/>
-<path d="M17.7783 0H1.77832V2000H17.7783V0Z"/>
+<path d="M17.7783 0H1.77832V2000H17.7783V0Z" fill="#F55B1E" fill-opacity="0.02"/>
+<mask id="mask0_255_325" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="2000">
+<path d="M18.7783 0H0.77832V2000H18.7783V0Z" fill="white"/>
+<path d="M17.7783 0H1.77832V2000H17.7783V0Z" fill="black"/>
 </mask>
-<path d="M17.7783 0H1.77832V2000H17.7783V0Z" fill="#FFFCFB"/>
-<path d="M1.77832 0H2.77832V2000H1.77832H0.77832V0H1.77832ZM17.7783 2000H16.7783V0H17.7783H18.7783V2000H17.7783Z" fill="url(#paint0_linear_179_20)" mask="url(#path-1-outside-1_179_20)"/>
-<mask id="path-3-outside-2_179_20" maskUnits="userSpaceOnUse" x="116.778" y="0" width="18" height="2000" fill="black">
-<rect fill="white" x="116.778" width="18" height="2000"/>
-<path d="M133.778 0H117.778V2000H133.778V0Z"/>
+<g mask="url(#mask0_255_325)">
+<path d="M1.77832 0H2.77832V2000H1.77832H0.77832V0H1.77832ZM17.7783 2000H16.7783V0H17.7783H18.7783V2000H17.7783Z" fill="url(#paint0_linear_255_325)"/>
+</g>
+<path d="M133.778 0H117.778V2000H133.778V0Z" fill="#F55B1E" fill-opacity="0.02"/>
+<mask id="mask1_255_325" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="116" y="0" width="19" height="2000">
+<path d="M134.778 0H116.778V2000H134.778V0Z" fill="white"/>
+<path d="M133.778 0H117.778V2000H133.778V0Z" fill="black"/>
 </mask>
-<path d="M133.778 0H117.778V2000H133.778V0Z" fill="#FFFCFB"/>
-<path d="M117.778 0H118.778V2000H117.778H116.778V0H117.778ZM133.778 2000H132.778V0H133.778H134.778V2000H133.778Z" fill="url(#paint1_linear_179_20)" mask="url(#path-3-outside-2_179_20)"/>
-<mask id="path-5-outside-3_179_20" maskUnits="userSpaceOnUse" x="232.778" y="0" width="17" height="2000" fill="black">
-<rect fill="white" x="232.778" width="17" height="2000"/>
-<path d="M249.778 0H233.778V2000H249.778V0Z"/>
+<g mask="url(#mask1_255_325)">
+<path d="M117.778 0H118.778V2000H117.778H116.778V0H117.778ZM133.778 2000H132.778V0H133.778H134.778V2000H133.778Z" fill="url(#paint1_linear_255_325)"/>
+</g>
+<mask id="mask2_255_325" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="232" y="0" width="18" height="2000">
+<path d="M249.778 0H232.778V2000H249.778V0Z" fill="white"/>
+<path d="M249.778 0H233.778V2000H249.778V0Z" fill="black"/>
 </mask>
-<path d="M233.778 0H234.778V2000H233.778H232.778V0H233.778Z" fill="url(#paint2_linear_179_20)" mask="url(#path-5-outside-3_179_20)"/>
+<g mask="url(#mask2_255_325)">
+<path d="M233.778 0H234.778V2000H233.778H232.778V0H233.778Z" fill="url(#paint2_linear_255_325)"/>
+</g>
 <defs>
-<linearGradient id="paint0_linear_179_20" x1="9.77832" y1="0" x2="9.77832" y2="2000" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_255_325" x1="9.77826" y1="0" x2="9.77826" y2="2000" gradientUnits="userSpaceOnUse">
 <stop stop-color="#F55B1E" stop-opacity="0.16"/>
 <stop offset="0.144231" stop-color="#F55B1E" stop-opacity="0.16"/>
 </linearGradient>
-<linearGradient id="paint1_linear_179_20" x1="125.778" y1="0" x2="125.778" y2="2000" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_255_325" x1="125.778" y1="0" x2="125.778" y2="2000" gradientUnits="userSpaceOnUse">
 <stop stop-color="#F55B1E" stop-opacity="0.16"/>
 <stop offset="0.144231" stop-color="#F55B1E" stop-opacity="0.16"/>
 </linearGradient>
-<linearGradient id="paint2_linear_179_20" x1="241.778" y1="0" x2="241.778" y2="2000" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_255_325" x1="241.778" y1="0" x2="241.778" y2="2000" gradientUnits="userSpaceOnUse">
 <stop stop-color="#F55B1E" stop-opacity="0.16"/>
 <stop offset="0.144231" stop-color="#F55B1E" stop-opacity="0.16"/>
 </linearGradient>

@@ -6,6 +6,8 @@ import React, {
   useRef,
 } from "react";
 
+import Image from "next/image";
+
 interface ProjectsSliderProps {
   projects: string[];
 }
@@ -57,7 +59,7 @@ const ProjectsSlider = ({ projects }: ProjectsSliderProps) => {
       >
         {projects.map((project, index) =>
           <div className="project-slide" key={index}>
-            {/* <Image src="/project-1.png" alt="" width={912} height={550} /> */}
+            <Image src={`/project-${index + 1}.png`} alt="" width={912} height={514} />
           </div>
         )}      
       </div>
