@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Geist } from "next/font/google";
 import "@/sass/main.scss";
 
+import Script from "next/script";
+
 import { headers } from "next/headers";
 
 import Header from "./components/Header";
@@ -59,7 +61,20 @@ export default async function RootLayout({
     <html lang="pt">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-9K0MB309B0"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9K0MB309B0', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </head>
       <body className={`page-${className}`}>
         <Header />
